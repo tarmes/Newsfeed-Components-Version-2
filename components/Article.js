@@ -86,6 +86,13 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'This is Trevor\'s first article',
+    date: 'July 16th, 1993',
+    firstParagraph: 'aso;ijfaosjfaighiutghoijfoadsjfoiasdjfisadfajsdhfsjdcoioidsjcsoidjsdoicjosidjc',
+    secondParagraph: 'aosjfaidjfoasjwoefhefuiwejnwdcmosdmosd',
+    thirdParagraph: 'fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff'
   }
 ];
 
@@ -114,3 +121,45 @@ const data = [
   Step 5: Try adding new article object to the data array. Make sure it is in the same format as the others.
   Refresh the page to see the new article.
 */
+const newsPaper = document.querySelector('.articles')
+
+function makeArticle({ title, date, firstParagraph, secondParagraph, thirdParagraph }) {
+
+  const article = document.createElement('div');
+  const artTitle = document.createElement('h2');
+  const artDate = document.createElement('p');
+  const firstText = document.createElement('p');
+  const secondText = document.createElement('p');
+  const thirdText = document.createElement('p');
+  const button = document.createElement('span');
+
+  article.appendChild(artTitle);
+  article.appendChild(artDate);
+  article.appendChild(firstText);
+  article.appendChild(secondText);
+  article.appendChild(thirdText);
+  article.appendChild(button);
+
+  article.classList.add('article');
+  artDate.classList.add('date');
+  button.classList.add('expandButton');
+
+  artTitle.textContent = title;
+  artDate.textContent = date;
+  firstText.textContent = firstParagraph;
+  secondText.textContent = secondParagraph;
+  thirdText.textContent = thirdParagraph;
+  button.textContent = '+';
+
+  button.addEventListener('click', evt => {
+    article.classList.toggle('article-open');
+  })
+
+  return article;
+}
+
+data.forEach(artObj => {
+  const newArticle = makeArticle(artObj);
+  newsPaper.appendChild(newArticle);
+})
+
