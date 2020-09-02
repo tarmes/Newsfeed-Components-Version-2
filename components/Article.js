@@ -87,7 +87,13 @@ const data = [
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
   },
-  
+  {
+    title: 'This is Trevor\'s first article',
+    date: 'July 16th, 1993',
+    firstParagraph: 'aso;ijfaosjfaighiutghoijfoadsjfoiasdjfisadfajsdhfsjdcoioidsjcsoidjsdoicjosidjc',
+    secondParagraph: 'aosjfaidjfoasjwoefhefuiwejnwdcmosdmosd',
+    thirdParagraph: 'fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff'
+  }
 ];
 
 /*
