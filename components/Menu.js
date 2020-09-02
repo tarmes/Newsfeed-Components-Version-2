@@ -50,7 +50,7 @@ function menuMaker(array) {
   const menuButton = document.querySelector('.menu-button');
 
   menuButton.addEventListener('click', evt => {
-    menuButton.classList.toggle('menu--open');
+    menu.classList.toggle('menu--open');
   })
 
   // const header = document.querySelector('.header');
@@ -63,5 +63,5 @@ function menuMaker(array) {
 const header = document.querySelector('.header');
 
 const newMenu = menuMaker(menuItems);
-header.appendChild(newMenu);
+header.prepend(newMenu);
 console.log(newMenu)
